@@ -1,1 +1,9 @@
-target/
+pom.xml
+pom.xml.asc
+*jar
+/lib/
+/classes/
+/target/
+/checkouts/
+.nrepl-port
+/.nrepl-history

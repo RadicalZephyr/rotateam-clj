@@ -1,6 +1,7 @@
 (set-env!
  :resource-paths #{"src" "resources"}
  :dependencies '[[org.clojure/clojure     "1.7.0" :scope "provided"]
+                 [com.datomic/datomic-pro "0.9.5206"]
                  [radicalzephyr/bootlaces "0.1.12"]])
 
 (require '[radicalzephyr.bootlaces :refer :all])

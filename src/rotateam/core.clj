@@ -1,5 +1,8 @@
 (ns rotateam.core)
 
+(defn team [members]
+  (into clojure.lang.PersistentQueue/EMPTY members))
+
 (defn swap-role [role team]
-  (assoc role :filling [(second (:filling role))
-                        (first (:filling role))]))
+  (update-in role [:filling] (fn [q]
+                               (conj (pop q) (peek q)))))
